@@ -118,7 +118,7 @@ Firefox 浏览器内置了 `自定义设计视图` 的功能，可以通过 `Fir
 [手Q开发过程中经验沉淀](https://github.com/imweb/mobile/issues/2)
 
 
-##来自[maxzhang](https://github.com/maxzhang "ava")的一些移动端经验总结干货
+##来自[zzh](https://programmingaworld.github.io)的一些移动端经验总结干货
 
 
 [移动Web单页应用开发实践——页面结构化](https://github.com/maxzhang/maxzhang.github.com/issues/8 "ava")
@@ -478,12 +478,12 @@ iPhone 4的一个 CSS 像素实际上表现为一块 2×2 的像素。所以图�
 
 ##移动 Web 开发经验技巧
 
-### 性能优化（来自同事 李文 的分享与整理）
+### 性能优化
 
 #### 技术相关
 
 - 离线缓存
-- css优化【3d动画优化】 
+- css优化【3d动画优化】
 - js优化 【js worker】
 - spdy,http2
 - service worker
@@ -629,7 +629,7 @@ rem是非常好用的一个属性，可以根据html来设定基准值，而且�
 	        }
 	    });
 	}
-	
+
 - ios上，软键盘状态改变的时候，不会触发window的resize事件，但是当软键盘的“完成”按钮被点击的时候，会触发onblur事件。所以正常通过onfocus和onblur事件来判断就行。
 
 
@@ -676,7 +676,7 @@ rem是非常好用的一个属性，可以根据html来设定基准值，而且�
 <http://www.w3.org/TR/css3-flexbox/>
 
 
-### 3dTouch相关 
+### 3dTouch相关
 
 https://developer.mozilla.org/en-US/docs/Web/API/Force_Touch_events
 
@@ -717,7 +717,7 @@ https://segmentfault.com/a/1190000005346689 pwa资料整理
 
 以上两种其实分别是retchat跟ionic的布局基石。
 
-这里有更详细的更多的选择<http://www.zhouwenbin.com/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/> 来自周文彬的博客
+这里有更详细的更多的选择<http://www.zhouwenbin.com/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/>
 
 
 ###h5底部输入框被键盘遮挡问题
@@ -745,7 +745,7 @@ h5页面有个很蛋疼的问题就是，当输入框在最底部，点击软键
 
  [（案例）CSS IMAGE SPRITES FOR RETINA (HIRES) DEVICES](http://alexthorpe.com/uncategorized/css-sprites-for-retina-display-devices/683/ "article5")
 
-###input类型为date情况下不支持placeholder（来自于江水）
+###input类型为date情况下不支持placeholder
 
 这其实是浏览器自己的处理。因为浏览器会针对此类型 input 增加 datepicker 模块。
 
@@ -774,21 +774,21 @@ h5页面有个很蛋疼的问题就是，当输入框在最底部，点击软键
 @media only screen and (min-device-width: 320px){  
          //针对iPhone 3  
 }  
-   
+
 @media only screen and (min-device-width: 320px)and (-webkit-min-device-pixel-ratio: 2) {  
          //针对iPhone 4, 5c,5s, 所有iPhone6的放大模式，个别iPhone6的标准模式  
 }  
 @media only screen and (min-device-width: 375px)and (-webkit-min-device-pixel-ratio: 2) {  
 //针对大多数iPhone6的标准模式  
 }  
-   
+
 @media only screen and (min-device-width: 375px)and (-webkit-min-device-pixel-ratio: 3) {  
 //针对所有iPhone6+的放大模式  
-   
+
 }  
 @media only screen and (min-device-width:412px) and (-webkit-min-device-pixel-ratio: 3) {  
 //针对所有iPhone6+的标准模式,414px写为412px是由于三星Nexus 6为412px，可一并处理  
-   
+
 }  
 
 
@@ -823,7 +823,7 @@ h5页面有个很蛋疼的问题就是，当输入框在最底部，点击软键
 
 1、css文件加载需要一些时间，在加载的过程中页面是空白的。 解决：可以考虑将css代码前置和内联。
 2、首屏无实际的数据内容，等待异步加载数据再渲染页面导致白屏。 解决：在首屏直接同步渲染html，后续的滚屏等再采用异步请求数据和渲染html。
-3、首屏内联js的执行会阻塞页面的渲染。 解决：尽量不在首屏html代码中放置内联脚本。（来自翔歌）
+3、首屏内联js的执行会阻塞页面的渲染。 解决：尽量不在首屏html代码中放置内联脚本。
 
 解决方案
 
@@ -838,9 +838,9 @@ h5页面有个很蛋疼的问题就是，当输入框在最底部，点击软键
 
 #### 加速度感应（摇一摇）
 
- if (window.DeviceMotionEvent) { 
+ if (window.DeviceMotionEvent) {
      window.addEventListener('devicemotion',deviceMotionHandler, false);  
- } 
+ }
  var speed = 30;//speed
  var x = y = z = lastX = lastY = lastZ = 0;
  function deviceMotionHandler(eventData) {  
@@ -856,7 +856,7 @@ h5页面有个很蛋疼的问题就是，当输入框在最底部，点击软键
      lastY = y;
      lastZ = z;
  }
- 
+
 #### 抽奖转盘
 
 #### 刮彩票
@@ -907,7 +907,7 @@ h5页面有个很蛋疼的问题就是，当输入框在最底部，点击软键
 
 补充一个来自三水清的详细讲解 <http://js8.in/2013/12/16/ios%E4%BD%BF%E7%94%A8schema%E5%8D%8F%E8%AE%AE%E8%B0%83%E8%B5%B7app/>
 
-###active的兼容(来自薛端阳)
+###active的兼容
 
 今天发现，要让a链接的CSS active伪类生效，只需要给这个a链接的touch系列的任意事件touchstart/touchend绑定一个空的匿名方法即可hack成功
 
@@ -1458,7 +1458,7 @@ charles 选择静态的html页面文件-saveResponse。之后把这个文件保�
 	    return false;
 	}
 
-<https://github.com/maxzhang/maxzhang.github.com/issues/31> 微信浏览器踩坑，来自maxZhang <https://github.com/maxzhang>
+<https://github.com/maxzhang/maxzhang.github.com/issues/31> 微信浏览器踩坑 <https://github.com/maxzhang>
 
 
 ###【UC浏览器】video标签脱离文档流
